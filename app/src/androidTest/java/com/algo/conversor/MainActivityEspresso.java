@@ -23,6 +23,7 @@ public class MainActivityEspresso {
     @Rule
     public ActivityScenarioRule<MainActivity> mainActivityActivityTestRule=new ActivityScenarioRule<>(MainActivity.class);
 
+    //Estas son las pruebas de Espresso que hacen test de forma grafica
     @Test
     public void pruebaMillasKms1(){
         Espresso.onView(withId(R.id.entrada)).perform(clearText());
@@ -63,7 +64,7 @@ public class MainActivityEspresso {
         Espresso.onView(withId(R.id.entrada)).perform(clearText());
         Espresso.onView(withId(R.id.entrada)).perform(typeText("hola"),closeSoftKeyboard());
         Espresso.onView(withId(R.id.MillasKms)).perform(click());
-        Espresso.onView(withId(R.id.salida)).check(matches(withText("si")));
+        Espresso.onView(withId(R.id.salida)).check(matches(withText("Error")));
     }
     @Test
     public void pruebaKmsMillas1(){
@@ -105,7 +106,7 @@ public class MainActivityEspresso {
         Espresso.onView(withId(R.id.entrada)).perform(clearText());
         Espresso.onView(withId(R.id.entrada)).perform(typeText("si"),closeSoftKeyboard());
         Espresso.onView(withId(R.id.KmsMillas)).perform(click());
-        Espresso.onView(withId(R.id.salida)).check(matches(withText("hola")));
+        Espresso.onView(withId(R.id.salida)).check(matches(withText("Error")));
     }
     @Test
     public void pruebaCFarenheit1(){
@@ -147,7 +148,7 @@ public class MainActivityEspresso {
         Espresso.onView(withId(R.id.entrada)).perform(clearText());
         Espresso.onView(withId(R.id.entrada)).perform(typeText("hola"),closeSoftKeyboard());
         Espresso.onView(withId(R.id.CFarenheit)).perform(click());
-        Espresso.onView(withId(R.id.salida)).check(matches(withText("si")));
+        Espresso.onView(withId(R.id.salida)).check(matches(withText("Error")));
     }
     @Test
     public void pruebaFarenheitC1(){
@@ -189,6 +190,6 @@ public class MainActivityEspresso {
         Espresso.onView(withId(R.id.entrada)).perform(clearText());
         Espresso.onView(withId(R.id.entrada)).perform(typeText("si"),closeSoftKeyboard());
         Espresso.onView(withId(R.id.FarenheitC)).perform(click());
-        Espresso.onView(withId(R.id.salida)).check(matches(withText("hola")));
+        Espresso.onView(withId(R.id.salida)).check(matches(withText("Error")));
     }
 }
