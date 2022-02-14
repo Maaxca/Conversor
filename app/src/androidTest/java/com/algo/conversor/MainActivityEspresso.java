@@ -23,7 +23,9 @@ public class MainActivityEspresso {
     @Rule
     public ActivityScenarioRule<MainActivity> mainActivityActivityTestRule=new ActivityScenarioRule<>(MainActivity.class);
 
-    //Estas son las pruebas de Espresso que hacen test de forma grafica
+    /**
+     * Estas son las pruebas de Espresso que hacen test de forma grafica
+     */
     @Test
     public void pruebaMillasKms1(){
         Espresso.onView(withId(R.id.entrada)).perform(clearText());

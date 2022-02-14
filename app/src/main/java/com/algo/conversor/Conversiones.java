@@ -2,7 +2,12 @@ package com.algo.conversor;
 
 public class Conversiones {
     Double resultado;
-    //Conversor de Millas a Kms
+
+    /**
+     * Conversor de Millas a Kms
+     * @param op1
+     * @return
+     */
     public String MillasKms(String op1){
         try{
         resultado=Double.parseDouble(op1)*1.60934;
@@ -12,7 +17,12 @@ public class Conversiones {
         }
         return String.valueOf(resultado);
     }
-    //Conversor de Kms a Millas
+
+    /**
+     * Conversor de Kms a Millas
+     * @param op1
+     * @return
+     */
     public String KmsMillas(String op1){
         try{
         resultado=Double.parseDouble(op1)*0.621;
@@ -22,7 +32,12 @@ public class Conversiones {
         }
         return String.valueOf(resultado);
     }
-    //Conversor de Celsius a Farenheit
+
+    /**
+     * Conversor de Celsius a Farenheit
+     * @param op1
+     * @return
+     */
     public String CFarenheit(String op1){
         try {
             resultado = ((Double.parseDouble(op1) * 9) / 5) + 32;
@@ -32,7 +47,12 @@ public class Conversiones {
         }
         return String.valueOf(resultado);
     }
-    //Conversor de Farenheit a Celsius
+
+    /**
+     * Conversor de Farenheit a Celsius
+     * @param op1
+     * @return
+     */
     public String FarenheitC(String op1){
         try{
         resultado=((Double.parseDouble(op1)-32)*5)/9;

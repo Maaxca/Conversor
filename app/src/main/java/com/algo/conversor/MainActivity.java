@@ -10,7 +10,9 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    //Declaro variables
+    /**
+     * Declaro variables
+     */
     Button MillasKms,KmsMillas,CFarenheit,FarenheitC;
     EditText entrada;
     TextView salida;
@@ -18,7 +20,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //Pongo a las variables lo que les corresponde
+        /**
+         * Pongo a las variables lo que les corresponde
+         */
         MillasKms=findViewById(R.id.MillasKms);
         KmsMillas=findViewById(R.id.KmsMillas);
         CFarenheit=findViewById(R.id.CFarenheit);
@@ -26,7 +30,9 @@ public class MainActivity extends AppCompatActivity {
         entrada=findViewById(R.id.entrada);
         salida=findViewById(R.id.salida);
 
-        //Cuando le das a Millas a Kms
+        /**
+         * Metodo que convierte millas en kms
+         */
         MillasKms.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -34,7 +40,9 @@ public class MainActivity extends AppCompatActivity {
                 salida.setText(conversiones.MillasKms(entrada.getText().toString()));
             }
         });
-        //Cuando le das a Kms a Millas
+        /**
+         * Metodo que convierte kms en millas
+         */
         KmsMillas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -42,7 +50,9 @@ public class MainActivity extends AppCompatActivity {
                 salida.setText(conversiones.KmsMillas(entrada.getText().toString()));
             }
         });
-        //Cuando le das a Grados Celsius a Farenheit
+        /**
+         * Metodo que convierte celsius en farenheit
+         */
         CFarenheit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,7 +60,9 @@ public class MainActivity extends AppCompatActivity {
                 salida.setText(conversiones.CFarenheit(entrada.getText().toString()));
             }
         });
-        //Cuando le das a Grados Farenheit a Celsius
+        /**
+         * Metodo que convierte Farenheit en celsius
+         */
         FarenheitC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
