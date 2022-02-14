@@ -8,13 +8,32 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+/**
+ * The type Main activity.
+ * @author Maaxca
+ */
 public class MainActivity extends AppCompatActivity {
 
     /**
      * Declaro variables
      */
-    Button MillasKms,KmsMillas,CFarenheit,FarenheitC;
+    Button MillasKms, /**
+     * The Kms millas.
+     */
+    KmsMillas, /**
+     * The C farenheit.
+     */
+    CFarenheit, /**
+     * The Farenheit c.
+     */
+    FarenheitC;
+    /**
+     * The Entrada.
+     */
     EditText entrada;
+    /**
+     * The Salida.
+     */
     TextView salida;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
