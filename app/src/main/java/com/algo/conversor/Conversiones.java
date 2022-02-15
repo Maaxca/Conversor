@@ -2,6 +2,8 @@ package com.algo.conversor;
 
 public class Conversiones {
     Double resultado;
+    long resultado2;
+    int resul;
 
     /**
      * Conversor de Millas a Kms
@@ -25,12 +27,12 @@ public class Conversiones {
      */
     public String KmsMillas(String op1){
         try{
-        resultado=Double.parseDouble(op1)*0.621;
+        resultado2=Math.round(Double.parseDouble(op1)*0.621);
         }
         catch(NumberFormatException e){
             return "Error";
         }
-        return String.valueOf(resultado);
+        return String.valueOf(resultado2);
     }
 
     /**
@@ -61,5 +63,15 @@ public class Conversiones {
             return "Error";
         }
         return String.valueOf(resultado);
+    }
+
+    public String pasarKBaMB(String op1){
+        try{
+            resul=Integer.parseInt(op1)/1024;
+        }
+        catch(NumberFormatException e){
+            return "Error";
+        }
+        return String.valueOf(resul);
     }
 }

@@ -8,10 +8,10 @@
     </option>
   </component>
   <component name="JavadocGenerationManager">
-    <option name="OUTPUT_DIRECTORY" value="$USER_HOME$/Desktop" />
+    <option name="OUTPUT_DIRECTORY" value="$USER_HOME$/Desktop/javadoc" />
     <option name="OPTION_DOCUMENT_TAG_AUTHOR" value="true" />
-    <option name="OTHER_OPTIONS" value="-sourcepath /path/to/sdk/platforms/android-##/android.jar" />
-    <option name="LOCALE" value="en" />
+    <option name="OTHER_OPTIONS" value="--ignore-source-errors" />
+    <option name="LOCALE" value="es" />
     <option name="OPTION_INCLUDE_LIBS" value="true" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">

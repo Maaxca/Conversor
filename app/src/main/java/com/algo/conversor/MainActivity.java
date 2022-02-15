@@ -26,7 +26,10 @@ public class MainActivity extends AppCompatActivity {
     CFarenheit, /**
      * The Farenheit c.
      */
-    FarenheitC;
+    FarenheitC, /**
+     * The Kb Mb.
+     */
+    KbMb;
     /**
      * The Entrada.
      */
@@ -46,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         KmsMillas=findViewById(R.id.KmsMillas);
         CFarenheit=findViewById(R.id.CFarenheit);
         FarenheitC=findViewById(R.id.FarenheitC);
+        KbMb=findViewById(R.id.kbMb);
         entrada=findViewById(R.id.entrada);
         salida=findViewById(R.id.salida);
 
@@ -87,6 +91,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Conversiones conversiones=new Conversiones();
                 salida.setText(conversiones.FarenheitC(entrada.getText().toString()));
+            }
+        });
+        KbMb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Conversiones conversiones=new Conversiones();
+                salida.setText(conversiones.pasarKBaMB(entrada.getText().toString()));
             }
         });
     }

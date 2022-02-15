@@ -25,6 +25,7 @@ import org.junit.runner.RunWith;
 public class MainActivityEspresso {
     /**
      * The Main activity activity test rule.
+     *
      * @author Maaxca
      */
     @Rule
@@ -104,7 +105,7 @@ public class MainActivityEspresso {
         Espresso.onView(withId(R.id.entrada)).perform(clearText());
         Espresso.onView(withId(R.id.entrada)).perform(typeText("1.60934"),closeSoftKeyboard());
         Espresso.onView(withId(R.id.KmsMillas)).perform(click());
-        Espresso.onView(withId(R.id.salida)).check(matches(withText("1.0")));
+        Espresso.onView(withId(R.id.salida)).check(matches(withText("1")));
     }
 
     /**
@@ -115,7 +116,7 @@ public class MainActivityEspresso {
         Espresso.onView(withId(R.id.entrada)).perform(clearText());
         Espresso.onView(withId(R.id.entrada)).perform(typeText("160.934"),closeSoftKeyboard());
         Espresso.onView(withId(R.id.KmsMillas)).perform(click());
-        Espresso.onView(withId(R.id.salida)).check(matches(withText("100.0")));
+        Espresso.onView(withId(R.id.salida)).check(matches(withText("100")));
     }
 
     /**
@@ -126,7 +127,7 @@ public class MainActivityEspresso {
         Espresso.onView(withId(R.id.entrada)).perform(clearText());
         Espresso.onView(withId(R.id.entrada)).perform(typeText("32.1868"),closeSoftKeyboard());
         Espresso.onView(withId(R.id.KmsMillas)).perform(click());
-        Espresso.onView(withId(R.id.salida)).check(matches(withText("20.0")));
+        Espresso.onView(withId(R.id.salida)).check(matches(withText("20")));
     }
 
     /**
@@ -137,7 +138,7 @@ public class MainActivityEspresso {
         Espresso.onView(withId(R.id.entrada)).perform(clearText());
         Espresso.onView(withId(R.id.entrada)).perform(typeText("-160.934"),closeSoftKeyboard());
         Espresso.onView(withId(R.id.KmsMillas)).perform(click());
-        Espresso.onView(withId(R.id.salida)).check(matches(withText("-100.0")));
+        Espresso.onView(withId(R.id.salida)).check(matches(withText("-100")));
     }
 
     /**
@@ -148,7 +149,7 @@ public class MainActivityEspresso {
         Espresso.onView(withId(R.id.entrada)).perform(clearText());
         Espresso.onView(withId(R.id.entrada)).perform(typeText("12.8748"),closeSoftKeyboard());
         Espresso.onView(withId(R.id.KmsMillas)).perform(click());
-        Espresso.onView(withId(R.id.salida)).check(matches(withText("8.0")));
+        Espresso.onView(withId(R.id.salida)).check(matches(withText("8")));
     }
 
     /**
@@ -292,5 +293,49 @@ public class MainActivityEspresso {
         Espresso.onView(withId(R.id.entrada)).perform(typeText("si"),closeSoftKeyboard());
         Espresso.onView(withId(R.id.FarenheitC)).perform(click());
         Espresso.onView(withId(R.id.salida)).check(matches(withText("Error")));
+    }
+
+    /**
+     * Prueba kbmb 1.
+     */
+    @Test
+    public void pruebaKBMB1(){
+        Espresso.onView(withId(R.id.entrada)).perform(clearText());
+        Espresso.onView(withId(R.id.entrada)).perform(typeText("100"),closeSoftKeyboard());
+        Espresso.onView(withId(R.id.kbMb)).perform(click());
+        Espresso.onView(withId(R.id.salida)).check(matches(withText("0")));
+    }
+
+    /**
+     * Prueba kbmb 2.
+     */
+    @Test
+    public void pruebaKBMB2(){
+        Espresso.onView(withId(R.id.entrada)).perform(clearText());
+        Espresso.onView(withId(R.id.entrada)).perform(typeText("1024"),closeSoftKeyboard());
+        Espresso.onView(withId(R.id.kbMb)).perform(click());
+        Espresso.onView(withId(R.id.salida)).check(matches(withText("1")));
+    }
+
+    /**
+     * Prueba kbmb 3.
+     */
+    @Test
+    public void pruebaKBMB3(){
+        Espresso.onView(withId(R.id.entrada)).perform(clearText());
+        Espresso.onView(withId(R.id.entrada)).perform(typeText("2048"),closeSoftKeyboard());
+        Espresso.onView(withId(R.id.kbMb)).perform(click());
+        Espresso.onView(withId(R.id.salida)).check(matches(withText("2")));
+    }
+
+    /**
+     * Prueba kbmb 4.
+     */
+    @Test
+    public void pruebaKBMB4(){
+        Espresso.onView(withId(R.id.entrada)).perform(clearText());
+        Espresso.onView(withId(R.id.entrada)).perform(typeText("9216"),closeSoftKeyboard());
+        Espresso.onView(withId(R.id.kbMb)).perform(click());
+        Espresso.onView(withId(R.id.salida)).check(matches(withText("9")));
     }
 }
